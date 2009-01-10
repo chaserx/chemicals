@@ -1,0 +1,17 @@
+<% title "Chemicals" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for chemical in @chemicals %>
+    <tr>
+      <td><%=h chemical.name %></td>
+      <td><%= link_to "Show", chemical %></td>
+      <td><%= link_to "Edit", edit_chemical_path(chemical) %></td>
+      <td><%= link_to "Destroy", chemical, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Chemical", new_chemical_path %></p>

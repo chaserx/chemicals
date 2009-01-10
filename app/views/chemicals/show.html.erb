@@ -1,0 +1,12 @@
+<% title "Chemical" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @chemical.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_chemical_path(@chemical) %> |
+  <%= link_to "Destroy", @chemical, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", chemicals_path %>
+</p>

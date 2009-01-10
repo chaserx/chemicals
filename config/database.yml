@@ -19,8 +19,8 @@ development:
   encoding: utf8
   database: chemicals_development
   pool: 5
-  username: root
-  password:
+  username: railsninja
+  password: 1234
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
