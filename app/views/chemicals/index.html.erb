@@ -40,7 +40,7 @@
 				<td><%= h chemical.storage %></td>
 				<td><%= h truncate(chemical.notes, {length=10, "..."}) %></td>
 				<td><%= h time_ago_in_words(chemical.created_at) %></td>
-				<td><%= link_to_if(chemical.msds.original_filename != nil, "MSDS", chemical.msds.url) %></td>
+				<td><%= has_msds(chemical) %></td>
 	      <td><%= link_to "Edit", edit_chemical_path(chemical) %></td>
 	      <td><%= link_to "Destroy", chemical, :confirm => 'Are you sure?', :method => :delete %></td>
 	    </tr>
