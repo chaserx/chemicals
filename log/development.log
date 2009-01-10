@@ -141,3 +141,40 @@ ActionView::TemplateError (undefined local variable or method `number_of_chemica
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (115.4ms)
 Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (2.2ms)
 Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:05:26) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.6ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.6ms)[0m   [0mSELECT * FROM `chemicals` [0m
+Completed in 262ms (View: 233, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing SearchesController#index (for 127.0.0.1 at 2009-01-10 13:05:32) [GET]
+  Parameters: {"search"=>"tween"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Sphinx: tween
+Sphinx Result: [100]
+  [4;36;1mChemical Load (2.7ms)[0m   [0;1mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` IN (100)) [0m
+  [4;35;1mChemical Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+Rendering template within layouts/application
+Rendering searches/index
+Completed in 123ms (View: 32, DB: 5) | 200 OK [http://localhost/searches?search=tween]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:05:42) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.5ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.2ms)[0m   [0mSELECT * FROM `chemicals` [0m
+Completed in 171ms (View: 148, DB: 6) | 200 OK [http://localhost/chemicals]
