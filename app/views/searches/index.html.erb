@@ -1,0 +1,51 @@
+<% title "Search Results" %>
+<div id="navigation">
+	<%= link_to('View All', chemicals_path) %>
+</div>
+<div id="searchbox">
+	<% form_tag searches_path, :method => :get do %>
+	  <p>
+	    <%= text_field_tag :search, params[:search] %>
+	    <%= submit_tag "Search", :name => nil %>
+	  </p>
+	<% end %>
+</div>
+<div id="controls">
+	Functions:
+	<%= link_to 'Add New chemicals', new_chemical_path %>
+	<%= link_to 'Export', formatted_chemicals_path(:csv) %>
+</div>
+<%= will_paginate @search_results %>
+<div id="chemtable">
+	<table>
+	  <tr>
+	    <th>Name</th>
+			<th>CAS</th>
+			<th>Formula</th>
+	    <th>AMT.</th>
+	    <th>QTY.</th>
+			<th>Location</th>
+			<th>Storage</th>
+			<th>Notes</th>
+			<th>Date Entered</th>
+			<th colspan="2">Actions</th>
+	  </tr>
+	  <% for result in @search_results %>
+	    <tr>
+	      <td><%= link_to(h(result.name), result) %><br /> <span class="infolinks">{ <%= link_to "PubChem", "http://www.ncbi.nlm.nih.gov/sites/entrez?db=pcsubstance&cmd=search&term=#{result.name}", :popup => TRUE, :class => "pubchemlinks" %> | <%= link_to "NIST", "http://webbook.nist.gov/cgi/cbook.cgi?Name=#{result.name}&Units=SI", :popup => TRUE, :class => 'nistlink'  %> }</span></td>
+				<td><%=h result.cas %></td>
+				<td><%=h result.formula %></td>
+				<td><%=h result.amount  %></td>
+				<td><%= h result.quantity %></td>
+				<td><%= h result.location %></td>
+				<td><%= h result.storage %></td>
+				<td><%= h truncate(result.notes, {length=10, "..."}) %></td>
+				<td><%= h time_ago_in_words(result.created_at) %></td>
+	      <td><%= link_to "Edit", edit_chemical_path(result) %></td>
+	      <td><%= link_to "Destroy", result, :confirm => 'Are you sure?', :method => :delete %></td>
+	    </tr>
+	  <% end %>
+	</table>
+</div>
+
+<%= will_paginate @search_results %>
