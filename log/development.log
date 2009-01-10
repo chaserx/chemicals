@@ -17,3 +17,9 @@ Migrating to CreateChemicals (20090110173415)
   [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
   [4;35;1mSQL (2.2ms)[0m   [0mdescribe `chemicals`[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `chemicals`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
