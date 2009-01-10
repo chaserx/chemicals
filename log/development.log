@@ -195,3 +195,132 @@ Migrating to AddAttachmentsMsdsToChemical (20090110182259)
   [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
   [4;35;1mSQL (1.8ms)[0m   [0mdescribe `chemicals`[0m
   [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `chemicals`[0m
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:39:25) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.5ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.2ms)[0m   [0mSELECT * FROM `chemicals` [0m
+Completed in 266ms (View: 236, DB: 8) | 200 OK [http://localhost/chemicals]
+
+
+Processing ChemicalsController#new (for 127.0.0.1 at 2009-01-10 13:39:29) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
+Rendering template within layouts/application
+Rendering chemicals/new
+Rendered chemicals/_form (21.9ms)
+Completed in 59ms (View: 40, DB: 5) | 200 OK [http://localhost/chemicals/new]
+
+
+Processing ChemicalsController#create (for 127.0.0.1 at 2009-01-10 13:40:45) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4fa861eff3de43ec26a2d68dd330aa815c3f7814", "chemical"=>{"smiles"=>"", "name"=>"Water", "location"=>"", "quantity"=>"1", "supplier"=>"", "notes"=>"", "catalognumber"=>"", "amount"=>"1L", "formula"=>"H2O", "storage"=>"", "inchi"=>"", "cas"=>"", "msds"=>#<ActionController::UploadedStringIO:0x20fbb10>}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChemical Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Assigning #<ActionController::UploadedStringIO:0x20fbb10> to msds
+[paperclip] Writing attributes for msds
+[paperclip] Post-processing msds
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mChemical Create (0.3ms)[0m   [0mINSERT INTO `chemicals` (`name`, `smiles`, `location`, `created_at`, `msds_content_type`, `msds_updated_at`, `quantity`, `notes`, `supplier`, `updated_at`, `amount`, `catalognumber`, `msds_file_name`, `msds_file_size`, `formula`, `storage`, `inchi`, `cas`) VALUES('Water', '', '', '2009-01-10 18:40:45', 'text/plain', '2009-01-10 18:40:45', 1, '', '', '2009-01-10 18:40:45', '1L', '', 'water_msds.txt', 30, 'H2O', '', '', '')[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for msds
+[paperclip] Deleting files for msds
+[paperclip] Writing files for msds
+[paperclip] -> /Users/chasesouthard/RailsProjects/chemicals/public/system/msds/148/original/water_msds.txt
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Chemical:0x20d32b4>
+Completed in 373ms (DB: 5) | 302 Found [http://localhost/chemicals]
+
+
+Processing ChemicalsController#show (for 127.0.0.1 at 2009-01-10 13:40:45) [GET]
+  Parameters: {"id"=>"148"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChemical Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mChemical Load (0.4ms)[0m   [0;1mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` = 148) [0m
+Rendering template within layouts/application
+Rendering chemicals/show
+Completed in 44ms (View: 25, DB: 4) | 200 OK [http://localhost/chemicals/148]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:40:48) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChemical Load (1.5ms)[0m   [0mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;36;1mChemical Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;36;1mChemical Load (1.4ms)[0m   [0;1mSELECT * FROM `chemicals` [0m
+Completed in 182ms (View: 153, DB: 7) | 200 OK [http://localhost/chemicals]
+
+
+Processing SearchesController#index (for 127.0.0.1 at 2009-01-10 13:40:59) [GET]
+  Parameters: {"search"=>"water"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Sphinx: water
+Sphinx Result: [109, 143]
+  [4;35;1mChemical Load (0.4ms)[0m   [0mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` IN (109,143)) [0m
+  [4;36;1mChemical Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
+Rendering template within layouts/application
+Rendering searches/index
+Completed in 63ms (View: 38, DB: 4) | 200 OK [http://localhost/searches?search=water]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mChemical Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT @@global.sql_mode, @@session.sql_mode;[0m
+
+
+Processing SearchesController#index (for 127.0.0.1 at 2009-01-10 13:41:51) [GET]
+  Parameters: {"search"=>"water"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Sphinx: water
+Sphinx Result: [109, 143, 148]
+  [4;36;1mChemical Load (0.6ms)[0m   [0;1mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` IN (109,143,148)) [0m
+  [4;35;1mChemical Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+Rendering template within layouts/application
+Rendering searches/index
+Completed in 159ms (View: 133, DB: 5) | 200 OK [http://localhost/searches?search=water]
+
+
+Processing ChemicalsController#show (for 127.0.0.1 at 2009-01-10 13:41:57) [GET]
+  Parameters: {"id"=>"148"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
+  [4;35;1mChemical Load (0.4ms)[0m   [0mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` = 148) [0m
+Rendering template within layouts/application
+Rendering chemicals/show
+Completed in 41ms (View: 22, DB: 4) | 200 OK [http://localhost/chemicals/148]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:42:00) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.5ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.3ms)[0m   [0mSELECT * FROM `chemicals` [0m
+Completed in 179ms (View: 151, DB: 7) | 200 OK [http://localhost/chemicals]

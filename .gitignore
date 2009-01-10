@@ -5,5 +5,5 @@ tmp/**/*
 config/database.yml
 config/development.sphinx.conf
 db/*.sqlite3
-public/msds/*
+public/system/*
 db/sphinx/*
