@@ -324,3 +324,227 @@ Rendering template within layouts/application
 Rendering chemicals/index
   [4;35;1mChemical Load (1.3ms)[0m   [0mSELECT * FROM `chemicals` [0m
 Completed in 179ms (View: 151, DB: 7) | 200 OK [http://localhost/chemicals]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:55:33) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.6ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (132.1ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.8ms)[0m   [0mSELECT * FROM `chemicals` [0m
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+Completed in 470ms (View: 310, DB: 137) | 200 OK [http://localhost/chemicals]
+
+
+Processing SearchesController#index (for 127.0.0.1 at 2009-01-10 13:55:39) [GET]
+  Parameters: {"search"=>"water"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Sphinx: water
+Sphinx Result: [109, 143, 148]
+  [4;36;1mChemical Load (0.4ms)[0m   [0;1mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` IN (109,143,148)) [0m
+  [4;35;1mChemical Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+Rendering template within layouts/application
+Rendering searches/index
+Completed in 71ms (View: 45, DB: 4) | 200 OK [http://localhost/searches?search=water]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 13:55:42) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.5ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (2.1ms)[0m   [0mSELECT * FROM `chemicals` [0m
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+Completed in 227ms (View: 198, DB: 8) | 200 OK [http://localhost/chemicals]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 14:03:16) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (1.7ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;35;1mChemical Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.1ms)[0m   [0mSELECT * FROM `chemicals` [0m
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+Completed in 298ms (View: 274, DB: 6) | 200 OK [http://localhost/chemicals]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 14:03:24) [GET]
+  Parameters: {"page"=>"5"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mChemical Load (2.2ms)[0m   [0;1mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 120, 30[0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;35;1mChemical Load (1.3ms)[0m   [0mSELECT * FROM `chemicals` [0m
+  [4;36;1mChemical Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+Completed in 169ms (View: 148, DB: 7) | 200 OK [http://localhost/chemicals?page=5]
+
+
+Processing ChemicalsController#show (for 127.0.0.1 at 2009-01-10 14:06:01) [GET]
+  Parameters: {"id"=>"126"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChemical Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `chemicals`[0m
+  [4;36;1mChemical Load (0.3ms)[0m   [0;1mSELECT * FROM `chemicals` WHERE (`chemicals`.`id` = 126) [0m
+Rendering template within layouts/application
+Rendering chemicals/show
+Completed in 40ms (View: 21, DB: 4) | 200 OK [http://localhost/chemicals/126]
+
+
+Processing ChemicalsController#index (for 127.0.0.1 at 2009-01-10 14:06:02) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mChemical Load (1.4ms)[0m   [0mSELECT * FROM `chemicals` ORDER BY name ASC LIMIT 0, 30[0m
+  [4;36;1mChemical Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `chemicals`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `chemicals` [0m
+Rendering template within layouts/application
+Rendering chemicals/index
+  [4;36;1mChemical Load (1.8ms)[0m   [0;1mSELECT * FROM `chemicals` [0m
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+[paperclip] Paperclip attachment msds on Chemical initialized.
+Completed in 346ms (View: 317, DB: 7) | 200 OK [http://localhost/chemicals]
