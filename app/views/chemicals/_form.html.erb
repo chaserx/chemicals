@@ -1,4 +1,4 @@
-<% form_for @chemical do |f| %>
+<% form_for @chemical, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
@@ -47,6 +47,10 @@
 	<p>
 		<%= f.label :notes %><br />
 		<%= f.text_area :notes %>
+	</p>
+	<p>
+		<%= f.label :msds %><br />
+		<%= f.file_field :msds %>
 	</p>
 	
   <p><%= f.submit "Submit" %></p>

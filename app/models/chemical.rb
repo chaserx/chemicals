@@ -13,5 +13,8 @@ class Chemical < ActiveRecord::Base
     
     has created_at
   end
+  
+  #paperclip
+  has_attached_file :msds
 
 end
